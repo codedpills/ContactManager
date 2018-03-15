@@ -1,0 +1,12 @@
+.container-signup {
+    margin-top: 50px;
+}
+
+.signup {
+    border: 1px solid blue;
+    padding: 50px;
+}
+
+.signup h3 {
+    padding-bottom: 30px;
+}

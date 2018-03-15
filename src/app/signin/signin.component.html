@@ -1,0 +1,45 @@
+<div class="container container-sigin">
+  <div class="row">
+
+    <div class="col-md"></div>
+
+    <div class="col-md-5">
+
+      <div class="signin">
+
+        <h3>Welcome, Please sign in</h3>
+  
+        <form 
+          [formGroup]="form"
+          (ngSubmit)="onSubmit(form.value)">
+
+          <div class="form-group" [ngClass]="displayFieldCSS('email')">
+            <label for="email" class="control-label required">Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Email">
+            <app-form-error-display
+              [displayMsg]="isFieldValid('email')"
+              errorMsg="Please type a correct email">
+            </app-form-error-display>
+          </div>
+  
+          <div class="form-group" [ngClass]="displayFieldCSS('password')">
+            <label for="password" class="control-label required">Password</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+            <app-form-error-display
+              [displayMsg]="isFieldValid('password')"
+              errorMsg="Please type at least 6 characters">
+            </app-form-error-display>
+          </div>
+  
+          <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Sign in</button>
+    
+        </form>
+    
+      </div>
+    </div>
+
+    <div class="col-md"></div>
+
+  </div>
+</div>
+
